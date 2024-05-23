@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalkulator Segitiga</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <div id="tabLuas" class="tab-luas">Luas</div>
-            <div id="tabKeliling" class="tab-keliling">Keliling</div>
-        </nav>
+      <nav class="navbar">
+        <div id="tabLuas" class="tab-luas">Luas</div>
+        <div id="tabKeliling" class="tab-keliling">Keliling</div>
+      </nav>
     </header>
     <main>
-        <div class="screen-luas">
-            <img src="/asset/logo.png" alt="png">
-        </div>
-        <div class="validate-form-luas">
-            <h1>Kalkulasi Luas</h1>
-            <input class="result" id="result" type="text" readonly>
-            <form id="formLuas">
-                <label for="alas">Nilai Alas</label>
-                <input class="alas" name="alas" type="text" required>
-                <label for="tinggi">Nilai Tinggi</label>
-                <input class="tinggi" name="alas" type="text" required>
-                <div>
-                    <input class="reset" id="reset" type="button" value="Reset">
-                    <input class="hitung" id="hitung" type="button" value="Hitung">
-                </div>
-            </form>
-        </div>
-        <div class="validate-form-keliling">
-            <h1>Kalkulasi Keliling</h1>
-            <input class="result" id="result" type="text" readonly>
-            <form id="formLuas">
-                <label for="sisi1">Panjang Sisi (1)</label>
-                <input class="alas" name="sisi1" type="text" required>
-                <label for="sisi2">Panjang Sisi (2)</label>
-                <input class="tinggi" name="sisi2" type="text" required>
-                <label for="sisi3">Panjang Sisi (3)</label>
-                <input class="tinggi" name="sisi3" type="text" required>
-                <div>
-                    <input class="reset" id="reset" type="button" value="Reset">
-                    <input class="hitung" id="hitung" type="button" value="Hitung">
-                </div>
-            </form>
-        </div>
+      <div class="screen-luas">
+        <img src="/asset/logo.png" alt="png" />
+      </div>
+      <div class="validate-form-luas">
+        <h1>Kalkulasi Luas</h1>
+        <input class="result" id="resultLuas" type="text" readonly />
+        <form id="formLuas">
+          <label for="alas">Nilai Alas (meter)</label>
+          <input class="alas" id="alas" name="alas" type="text" required />
+          <label for="tinggi">Nilai Tinggi (meter)</label>
+          <input
+            class="tinggi"
+            id="tinggi"
+            name="tinggi"
+            type="text"
+            required
+          />
+          <div>
+            <input class="reset" id="resetLuas" type="button" value="Reset" />
+            <input
+              class="hitung"
+              id="hitungLuas"
+              type="button"
+              value="Hitung"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="validate-form-keliling">
+        <h1>Kalkulasi Keliling</h1>
+        <input class="result" id="resultKeliling" type="text" readonly />
+        <form id="formKeliling">
+          <label for="sisi1">Panjang Sisi (a meter)</label>
+          <input class="alas" id="sisiA" name="sisi1" type="text" required />
+          <label for="sisi2">Panjang Sisi (b meter)</label>
+          <input class="tinggi" id="sisiB" name="sisi2" type="text" required />
+          <label for="sisi3">Panjang Sisi (c meter)</label>
+          <input class="tinggi" id="sisiC" name="sisi3" type="text" required />
+          <div>
+            <input
+              class="reset"
+              id="resetKeliling"
+              type="button"
+              value="Reset"
+            />
+            <input
+              class="hitung"
+              id="hitungKeliling"
+              type="button"
+              value="Hitung"
+            />
+          </div>
+        </form>
+      </div>
     </main>
-</body>
+    <script src="/js/script.js"></script>
+  </body>
 </html>

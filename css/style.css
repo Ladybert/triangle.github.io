@@ -29,58 +29,36 @@ header .navbar {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-header .navbar .tab-luas {
-    display: flex;
-    padding: 3vh 9vh;
-    cursor: pointer;
-}
-
-header .navbar .tab-luas:hover {
-    background: green;
-    border-radius: 2vh 0 0 2vh;
-    transition-timing-function: ease-in-out;
-    transition-delay: 100ms;
-}
-
-header .navbar .tab-luas:active {
-    background: green;
-    border-radius: 2vh 0 0 2vh;
-    transition-timing-function: ease-in-out;
-    transition-delay: 100ms;
-}
-
-header .navbar .tab-luas:focus {
-    background: green;
-    border-radius: 2vh 0 0 2vh;
-    transition-timing-function: ease-in-out;
-    transition-delay: 100ms;
-}
-
+header .navbar .tab-luas,
 header .navbar .tab-keliling {
     display: flex;
     padding: 3vh 9vh;
     cursor: pointer;
+    transition: background-color 100ms ease-in-out;
+}
+
+header .navbar .tab-luas.active {
+    background-color: green;
+    color: white;
+    border-radius: 2vh 0  0 2vh;
+}
+
+header .navbar .tab-keliling.active {
+    background-color: green;
+    color: white;
+    border-radius: 0 2vh 2vh 0;
+}
+
+header .navbar .tab-luas:hover {
+    background: green;
+    color: white;
+    border-radius: 2vh 0 0 2vh;
 }
 
 header .navbar .tab-keliling:hover {
     background: green;
+    color: white;
     border-radius: 0 2vh 2vh 0;
-    transition-timing-function: ease-in-out;
-    transition-delay: 100ms;
-}
-
-header .navbar .tab-keliling:active {
-    background: green;
-    border-radius: 0 2vh 2vh 0;
-    transition-timing-function: ease-in-out;
-    transition-delay: 100ms;
-}
-
-header .navbar .tab-keliling:focus {
-    background: green;
-    border-radius: 0 2vh 2vh 0;
-    transition-timing-function: ease-in-out;
-    transition-delay: 100ms;
 }
 
 main {
@@ -103,7 +81,7 @@ main .screen-luas img {
 }
 
 main .validate-form-luas {
-    display: flex;
+    display: none;
     flex-direction: column;
     box-shadow: rgba(0 , 128, 0, 0.3) 0 0 7px 7px;
     color: white;
@@ -180,6 +158,10 @@ main .validate-form-luas .result {
     margin: 1vh 0 4vh 0;
 }
 
+main .validate-form-luas input {
+    color: white;
+}
+
 main .validate-form-keliling {
     display: none;
     flex-direction: column;
@@ -189,7 +171,11 @@ main .validate-form-keliling {
     padding: 2vh 7vh;
 }
 
- main .validate-form-keliling h1 {
+main .validate-form-keliling input {
+    color: white;
+}
+
+main .validate-form-keliling h1 {
     display: flex;
     margin-bottom: 1vh;
     font-weight: 400;
